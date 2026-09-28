@@ -26,6 +26,8 @@ jobs:
       - name: Upload APK to GitHub Releases
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: 1.0.0
+          name: Release 1.0.0
           files: app/build/outputs/apk/release/app-release-unsigned.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
