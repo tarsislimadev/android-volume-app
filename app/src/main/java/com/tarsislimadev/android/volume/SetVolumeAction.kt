@@ -2,8 +2,8 @@ package com.tarsislimadev.android.volume
 
 import android.content.Context
 import android.media.AudioManager
-import androidx.glance.GlanceId
 import androidx.glance.action.ActionParameters
+import androidx.glance.GlanceId
 import androidx.glance.appwidget.action.ActionCallback
 
 class SetVolumeAction : ActionCallback {
@@ -36,10 +36,5 @@ class SetVolumeAction : ActionCallback {
         const val MODE_MUTE = "mute"
         const val MODE_HALF = "half"
         const val MODE_MAX = "max"
-
-        fun actionParametersOf(vararg params: Pair<ActionParameters.Key<*>, Any>) = 
-            ActionParameters.Builder().apply {
-                params.forEach { (key, value) -> set(key, value) }
-            }.build()
     }
 }

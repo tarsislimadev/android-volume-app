@@ -6,6 +6,8 @@ import androidx.compose.ui.unit.dp
 import androidx.glance.GlanceId
 import androidx.glance.GlanceModifier
 import androidx.glance.GlanceTheme
+import androidx.glance.action.ActionParameters
+import androidx.glance.action.actionParametersOf
 import androidx.glance.action.clickable
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.provideContent
@@ -61,7 +63,9 @@ class VolumeWidget : GlanceAppWidget() {
                 WidgetButton(
                     text = "Mute",
                     action = actionRunCallback<SetVolumeAction>(
-                        SetVolumeAction.actionParametersOf(SetVolumeAction.MODE_KEY to SetVolumeAction.MODE_MUTE)
+                        actionParametersOf(
+                            SetVolumeAction.MODE_KEY to SetVolumeAction.MODE_MUTE
+                        )
                     )
                 )
 
@@ -70,7 +74,9 @@ class VolumeWidget : GlanceAppWidget() {
                 WidgetButton(
                     text = "50%",
                     action = actionRunCallback<SetVolumeAction>(
-                        SetVolumeAction.actionParametersOf(SetVolumeAction.MODE_KEY to SetVolumeAction.MODE_HALF)
+                        actionParametersOf(
+                            SetVolumeAction.MODE_KEY to SetVolumeAction.MODE_HALF
+                        )
                     )
                 )
 
@@ -79,7 +85,9 @@ class VolumeWidget : GlanceAppWidget() {
                 WidgetButton(
                     text = "Max",
                     action = actionRunCallback<SetVolumeAction>(
-                        SetVolumeAction.actionParametersOf(SetVolumeAction.MODE_KEY to SetVolumeAction.MODE_MAX)
+                        actionParametersOf(
+                            SetVolumeAction.MODE_KEY to SetVolumeAction.MODE_MAX
+                        )
                     )
                 )
             }
