@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Optional: Required if modifying notification/ring volumes under Do Not Disturb -->
+    <uses-permission android:name="android.app.NOTIFICATION_POLICY_ACCESS_SETTINGS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
