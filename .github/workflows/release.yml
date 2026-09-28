@@ -1,14 +1,11 @@
 name: Android CI/CD
 
 on:
-  push:
-    tags:
-      - 'v*' # Trigger on version tags (e.g., v1.0.0)
+  workflow_dispatch: 
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
